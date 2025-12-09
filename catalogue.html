@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Jupiter Pharma — Product Catalogue</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Catalogue-specific overrides */
+    body{background:#fff;padding:40px}
+    .catalog-header{display:flex;align-items:center;gap:16px;margin-bottom:26px}
+    .catalog-title{font-family:"Montserrat",sans-serif;font-size:1.6rem}
+    .catalog-intro{color:var(--muted);margin-bottom:18px}
+    table.catalog{width:100%;border-collapse:collapse;margin-top:12px}
+    table.catalog th, table.catalog td{padding:10px;border:1px solid #e6eef8;text-align:left}
+    table.catalog th{background:var(--primary);color:#fff}
+    .logo{width:56px;height:56px}
+    @media print{
+      body{padding:18mm}
+      a[href]:after{content:"";}
+    }
+  </style>
+</head>
+<body>
+  <header class="catalog-header">
+    <img src="logo.svg" alt="Jupiter Pharma logo" class="logo">
+    <div>
+      <div class="catalog-title">Jupiter Pharma — Product Catalogue</div>
+      <div class="catalog-intro">High-quality formulations manufactured under WHO-GMP standards. For samples and pricing, contact info@jupiterpharma.com</div>
+    </div>
+  </header>
+
+  <section>
+    <h3>Product Categories & SKUs</h3>
+    <table class="catalog">
+      <thead>
+        <tr><th>Category</th><th>Sample Products / SKUs</th><th>Dosage Forms</th><th>Pack Sizes</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Antibiotics</td><td>Amoxicillin 500 mg, Cefixime 200 mg, Azithromycin 250 mg</td><td>Tablets / Capsules / Syrups</td><td>10x10, 100x, 60ml</td></tr>
+        <tr><td>Pain Management</td><td>Paracetamol 500 mg, Diclofenac 50 mg</td><td>Tablets</td><td>10x10, 20x10</td></tr>
+        <tr><td>Gastro Care</td><td>Pantoprazole 40 mg, Omeprazole 20 mg</td><td>Capsules / Tablets</td><td>10x10, 30x</td></tr>
+        <tr><td>Cardiac & Diabetes</td><td>Metformin 500 mg, Amlodipine 5 mg</td><td>Tablets</td><td>10x10, 30x</td></tr>
+        <tr><td>Anti-Allergic</td><td>Cetirizine 10 mg</td><td>Tablets</td><td>10x10</td></tr>
+        <tr><td>Pediatric</td><td>Multi vitamin dry syrup, Paracetamol syrup</td><td>Dry syrup / Syrup</td><td>60ml, 100ml</td></tr>
+        <tr><td>Nutraceuticals</td><td>Multivitamin tablets, Protein blends</td><td>Tablets / Powder</td><td>60s, 200g</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="margin-top:28px">
+    <h3>Manufacturing & Quality</h3>
+    <p>WHO-GMP compliant manufacturing, in-house QC, stability studies and full regulatory documentation support.</p>
+  </section>
+
+  <footer style="margin-top:36px;color:var(--muted);font-size:0.95rem">
+    Jupiter Pharma — Email: info@jupiterpharma.com | Phone: +91 98XXXXX XXXX
+  </footer>
+</body>
+</html>
