@@ -1,0 +1,119 @@
+:root{
+  --primary:#1A73E8;
+  --secondary:#0F9D58;
+  --accent:#F4B400;
+  --bg:#ffffff;
+  --muted:#6b7280;
+  --text:#0f172a;
+  --max-width:1200px;
+  --radius:8px;
+}
+
+/* Reset & basics */
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:"Open Sans",system-ui,-apple-system,Segoe UI,Roboto,"Helvetica Neue",Arial;
+  color:var(--text);
+  background:var(--bg);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.45;
+}
+
+/* Container */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* Header */
+.site-header{
+  background:#fff;
+  border-bottom:1px solid #e6eef8;
+  position:sticky;
+  top:0;
+  z-index:40;
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+  padding:14px 0;
+}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo{width:46px;height:46px}
+.brand-text{font-family:"Montserrat",sans-serif;font-weight:700;color:var(--primary);letter-spacing:0.2px}
+.nav{display:flex;gap:14px}
+.nav a{color:var(--text);text-decoration:none;padding:6px 8px;border-radius:6px;font-size:0.95rem}
+.nav a:hover{background:#eef6ff;color:var(--primary)}
+.cta{background:var(--primary);color:#fff;border:0;padding:8px 12px;border-radius:6px;cursor:pointer}
+.cta:hover{opacity:0.95}
+
+/* HERO */
+.hero{padding:48px 0;display:flex;align-items:center;background:linear-gradient(180deg,#f8fbff 0%, #fff 100%)}
+.hero-inner{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center}
+.hero-copy h1{font-family:"Montserrat",sans-serif;font-size:clamp(1.6rem,2.8vw,2.8rem);margin:0 0 12px}
+.lead{color:var(--muted);margin:0 0 18px;font-size:1.05rem}
+.hero-actions{display:flex;gap:12px}
+.btn{display:inline-block;text-decoration:none;padding:10px 14px;border-radius:8px;font-weight:600}
+.btn-primary{background:var(--primary);color:#fff}
+.btn-secondary{background:var(--secondary);color:#fff}
+.btn-outline{border:1px solid var(--primary);color:var(--primary);background:transparent}
+.btn:hover{opacity:0.95}
+
+/* Cards */
+.card{background:#fff;border-radius:10px;padding:14px;margin-bottom:12px;border:1px solid #eef4fb;box-shadow:0 2px 6px rgba(16,24,40,0.03)}
+.card-elevated{box-shadow:0 6px 20px rgba(16,24,40,0.08)}
+.highlight{border-left:6px solid var(--primary)}
+
+/* Strengths */
+.strengths{padding:26px 0}
+.strengths-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;list-style:none;padding:0;margin:0}
+.strengths-grid li{background:#fff;padding:14px;border-radius:8px;border:1px solid #eef4fb;text-align:left}
+
+/* Product list/grid */
+.two-col{display:grid;grid-template-columns:1fr 360px;gap:22px;align-items:start}
+.product-list{padding-left:18px;color:var(--muted)}
+.contact-card{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
+
+/* Features / grids */
+.features-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:10px}
+.grid.three-col{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.small{padding:10px;text-align:center}
+
+/* Services list */
+.services-list{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:10px 0}
+.services-list li{background:#fff;padding:10px 12px;border-radius:8px;border:1px solid #eef4fb}
+
+/* Contact form */
+.form{display:flex;flex-direction:column;gap:10px}
+.form label{display:flex;flex-direction:column;font-size:0.9rem}
+.form input,.form textarea{padding:8px;border-radius:6px;border:1px solid #dcecf7;font-size:0.95rem}
+.form .form-actions{display:flex;gap:8px;margin-top:6px}
+.form-note{color:var(--muted);font-size:0.9rem;margin-top:8px}
+
+/* Footer */
+.site-footer{border-top:1px solid #e6eef8;padding:18px 0;margin-top:18px;background:#fff}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:0.95rem}
+.footer-links a{margin-left:8px;color:var(--muted);text-decoration:none}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-inner{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .nav{display:none}
+  .header-inner{justify-content:space-between}
+  .brand-text{display:none}
+}
+
+/* Print styles for catalogue download */
+@media print{
+  body{color:#000;background:#fff}
+  header,footer,.cta, .btn, .contact-card, .nav,.hero-media{display:none !important}
+  .container{width:100%}
+  .product-list li{font-size:12pt}
+}
