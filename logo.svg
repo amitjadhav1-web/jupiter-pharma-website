@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="512" height="128" viewBox="0 0 512 128" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Jupiter Pharma logo">
+  <!-- Circle / planet -->
+  <g transform="translate(16,16)">
+    <circle cx="48" cy="48" r="36" fill="#1A73E8" />
+    <!-- ring -->
+    <path d="M6 44c18-28 80-38 120-14" stroke="#0F9D58" stroke-width="6" stroke-linecap="round" fill="none" opacity="0.95"/>
+    <!-- inner highlight -->
+    <circle cx="48" cy="48" r="20" fill="#FFFFFF" fill-opacity="0.04"/>
+  </g>
+
+  <!-- Text -->
+  <g transform="translate(120,40)">
+    <text x="0" y="12" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="28" fill="#0f172a">JUPITER</text>
+    <text x="0" y="44" font-family="Montserrat, Arial, sans-serif" font-weight="700" font-size="24" fill="#0f172a">PHARMA</text>
+  </g>
+</svg>
